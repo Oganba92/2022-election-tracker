@@ -8,6 +8,8 @@ cd seir-7-25/unit-04
 git clone git@git.generalassemb.ly:SEIR-7-25/mern-infrastructure.git
 cd mern-infrastructure
 
+npx create-react-app mern
+cd mern
 code .
 ```
 
