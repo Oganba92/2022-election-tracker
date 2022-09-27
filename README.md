@@ -1,4 +1,4 @@
-# React Intro
+# MERN Infrastructure
 
 ## ⚠️⚠️⚠️ DO NOT FORK ⚠️⚠️⚠️
 
@@ -6,7 +6,7 @@
 cd Desktop
 cd seir-7-25/unit-04
 git clone git@git.generalassemb.ly:SEIR-7-25/mern-infrastructure.git
-cd react-intro
+cd mern-infrastructure
 
 code .
 ```
@@ -19,4 +19,4 @@ git checkout main
 git reset --hard origin/main
 ```
 
-The above commands will only function if you are in the `react-intro` directory.
+The above commands will only function if you are in the `mern-infrastructure` directory.
