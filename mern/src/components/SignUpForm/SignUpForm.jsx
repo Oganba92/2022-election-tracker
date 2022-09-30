@@ -24,7 +24,13 @@ export default class SignUpForm extends Component {
 
   handleSubmit = (evt) => {
     evt.preventDefault();
-    alert(JSON.stringify(this.state));
+    try{
+      alert(JSON.stringify(this.state));
+    } catch{
+      this.setState({
+        error : 'Sign Up Failed - Try Again'
+      })
+    }
   }
 
   handleChange = (evt) => {
