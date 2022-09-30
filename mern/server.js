@@ -22,12 +22,15 @@ app.use(express.json());
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
+// http://localhost:3001/api/users
+app.use('/api/users', require('./routes/api/users'));
+
 // Put API routes here, before the "catch all" route
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 // Configure to use port 3001 instead of 3000 during
@@ -35,5 +38,5 @@ app.get('/*', function (req, res) {
 const port = process.env.PORT || 3001;
 
 app.listen(port, function () {
-  console.log(`Express app running on port ${port}`)
+    console.log(`Express app running on port ${port}`)
 });
