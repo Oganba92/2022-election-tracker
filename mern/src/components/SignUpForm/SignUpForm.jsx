@@ -1,4 +1,6 @@
 import {Component} from 'react';
+import {signUp} from '../../utilities/users-service';
+
 
 export default class SignUpForm extends Component {
     // // state is always an object with a property for each "piece" of state
@@ -22,13 +24,14 @@ export default class SignUpForm extends Component {
         error: '',
     }
 
-    handleSubmit = (evt) => {
+    handleSubmit = async (evt) => {
         evt.preventDefault();
         try {
             // alert(JSON.stringify(this.state));
             const formData = {...this.state};
             delete formData.error;
             delete formData.confirm;
+            const user = await signUp(formData);
         } catch {
             this.setState({
                 error: 'Sign Up Failed - Try Again'
