@@ -48,3 +48,8 @@ export function getUser() {
      */
     return token ? JSON.parse(atob(token.split('.')[1])).user : null;
 }
+
+export function logOut() {
+    // remove token from local storage
+    localStorage.removeItem('token');
+}
