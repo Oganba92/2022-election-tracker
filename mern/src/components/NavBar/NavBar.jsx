@@ -8,6 +8,7 @@ export default function NavBar({user}) {
             <Link to="/orders/new">New Order</Link>
             &nbsp; | &nbsp;
             <span>Welcome, {user.name}</span>
+            &nbsp;&nbsp; <Link to={}>Logout</Link>
         </nav>
     )
 }
