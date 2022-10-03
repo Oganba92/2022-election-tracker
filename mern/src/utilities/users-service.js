@@ -5,7 +5,7 @@ export async function signUp(userData) {
         const token = await usersAPI.signUp(userData);
         // save the data to local storage
         localStorage.setItem('token', token);
-        return token;
+        return getUser();
     } catch {
         throw new Error("Invalid Sign Up");
     }
