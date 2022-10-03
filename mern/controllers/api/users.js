@@ -27,6 +27,7 @@ async function login(req, res) {
         // if there is no user in the throw an error
         if (!user) throw new Error();
         // get user submitted password, and compare with the object found on the db
+        // apple, HSH3ychs
         const match = await bcrypt.compare(req.body.password, user.password);
         // no, match? send error
         if (!match) throw new Error();

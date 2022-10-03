@@ -5,7 +5,7 @@ export default function LoginForm({setUser}) {
     // initial state, username and password is set to empty string
     const [credentials, setCredentials] = useState({
         email: '',
-        password: ''
+        password: '',
     });
     // error code is set to empty string
     const [error, setError] = useState('');

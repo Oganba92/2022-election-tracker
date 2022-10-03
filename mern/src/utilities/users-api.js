@@ -26,6 +26,12 @@ export async function login(credentials) {
     // http://localhost:3001/api/users/login
     // here, credentials means username and password which we got it from the LoginForm.jsx
     // and sent it via the user-service.js
+    /*
+        {
+            "username: "suresh",
+            "password": "password"
+        }
+     */
     const res = await fetch(`${BASE_URL}/login`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
@@ -40,4 +46,3 @@ export async function login(credentials) {
         throw new Error('Invalid Log In');
     }
 }
-
