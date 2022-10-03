@@ -1,4 +1,6 @@
 // http://localhost:3001/api/users
+import {getToken} from "./users-service";
+
 const BASE_URL = '/api/users';
 
 export async function signUp(userData) {
@@ -20,6 +22,13 @@ async function sendRequest(url, method = 'GET', payload = null) {
         // Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
         options.body = JSON.stringify(payload);
     }
+
+    const token = getToken();
+    if (token) {
+        options.headers = options.headers || {};
+        options.headers.Authorization = `Bearer ${token}`;
+    }
+
     // tell fetch function to send data to URL with some data
     // if there is any data
     // this depends on HTTP methods such as GET OR POST
