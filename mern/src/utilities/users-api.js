@@ -17,6 +17,7 @@ export async function signUp(userData) {
         return res.json();
     } else {
         console.log("here !");
+        // error
         throw new Error('Invalid Sign Up');
     }
 }
