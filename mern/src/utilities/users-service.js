@@ -55,7 +55,12 @@ export function logOut() {
 }
 
 export async function login(credentials) {
+    // credentials means the data we obtained from the LoginForm.jsx
+    // send it to the api and see if the user has correct credentials
     const token = await usersAPI.login(credentials);
+    // save the token in local storage
     localStorage.setItem('token', token);
+    // call getUser, so we can save the user data by calling setUser inside
+    // the LoginForm.jsx
     return getUser();
 }

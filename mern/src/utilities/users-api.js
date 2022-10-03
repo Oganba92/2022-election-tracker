@@ -23,14 +23,20 @@ export async function signUp(userData) {
 }
 
 export async function login(credentials) {
+    // http://localhost:3001/api/users/login
+    // here, credentials means username and password which we got it from the LoginForm.jsx
+    // and sent it via the user-service.js
     const res = await fetch(`${BASE_URL}/login`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(credentials)
     });
+    // everything went fine
     if (res.ok) {
         return res.json();
-    } else {
+    }
+    // login failed, send error
+    else {
         throw new Error('Invalid Log In');
     }
 }
