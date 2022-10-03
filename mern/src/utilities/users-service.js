@@ -64,3 +64,7 @@ export async function login(credentials) {
     // the LoginForm.jsx
     return getUser();
 }
+
+export function checkToken() {
+    alert('clicked');
+}
