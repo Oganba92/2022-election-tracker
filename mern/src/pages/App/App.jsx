@@ -2,8 +2,8 @@ import './App.css';
 import {useState} from 'react';
 // Import the following components
 import AuthPage from '../AuthPage/AuthPage';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
+import NewElectionsPage from '../NewElectionPage/NewElectionPage';
+import ElectionsPage from '../ElectionsPage/ElectionsPage';
 import {Routes, Route} from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import {getUser} from '../../utilities/users-service';
@@ -18,8 +18,8 @@ function App() {
                 <>
                     <NavBar user={user} setUser={setUser}/>
                     <Routes>
-                        <Route path="/orders/new" element={<NewOrderPage/>}/>
-                        <Route path="/orders" element={<OrderHistoryPage/>}/>
+                        <Route path="/elections/new" element={<NewElectionsPage/>}/>
+                        <Route path="/elections" element={<ElectionsPage/>}/>
                     </Routes>
                 </>
                 :
